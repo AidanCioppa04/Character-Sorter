@@ -1,9 +1,10 @@
+import java.util.HashSet;
 import java.util.List;
 
 public class Rateable {
-    String name;
+    final String name;
     //image???//
-    String tags[];
+    static HashSet<String> tags= new HashSet<>();
 
     public Rateable(String name){
         this.name=name;
@@ -14,9 +15,10 @@ public class Rateable {
     //1 - tag added successfully
     //2 - object already had the tag
     //3 - 
-    public static int addTag(String tag){
-
-
-        return 0;
+    private static void addTag(String tag){
+        tags.add(tag);
+    }
+    public static String getName(){
+        return this.name;
     }
 }
