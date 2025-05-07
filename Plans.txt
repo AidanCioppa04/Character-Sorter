@@ -1,0 +1,21 @@
+GOAL
+    Build a "Character Sorter" that takes a group of "Rateables" and returns a sorted list
+
+            Intended "sorted" order would be a list where the favorite characters are first and the least favorite last, however
+            the output is dependent on how the user interacts with the quiz so "sorted" is whatever metric the user uses
+            **For parity throughout the notes, I will assume assume the ideal sorted order is one where "rateables" are in order
+            of most liked to least liked**
+
+            Rateables will be a class holding the information of each character or thing capable of being put in the list
+            Each object will have the fields [name, image,[tags]] where tags is a list of strings
+                Tags will be used to allow users to manually select characters to compare, or select curated sets
+            Users will be able to create their own characters to put into the program
+                Wether pre-set sets will be hardcoded in or wether user created sets will be possible will be figured out later
+
+            Sorting will use a series of "choose one" questions between two characters to decide placement in the list
+            A elo based system will be attempted first, with initial questions making large movements in elo with questions later
+            in the process refining the placements
+                "full sort" and "quick sort" options will be available
+                "full sort" will perform all relevant comparisons and provide a fully sorted list
+                "quick sort" will ask about half as many questions as full sort for the sake of time, and may be less accurate
+                but will still have high accuracy within the top portion of the sort
