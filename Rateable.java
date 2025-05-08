@@ -4,10 +4,11 @@ import java.util.List;
 public class Rateable {
     final String name;
     //image???//
-    static HashSet<String> tags= new HashSet<>();
+    static HashSet<String> tags;
 
     public Rateable(String name){
         this.name=name;
+        tags=new HashSet<String>;
     }
 
     //adds a tag to the objects tag list//
@@ -18,7 +19,7 @@ public class Rateable {
     private static void addTag(String tag){
         tags.add(tag);
     }
-    public static String getName(){
-        return this.name;
+    public String getName(){
+        return name;
     }
 }
