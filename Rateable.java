@@ -13,10 +13,6 @@ public class Rateable {
     }
 
     //adds a tag to the objects tag list//
-    //0 - error
-    //1 - tag added successfully
-    //2 - object already had the tag
-    //3 - 
     private void setTag(String tag){
         tag=tag.toLowerCase();
         tags.add(tag);
@@ -37,5 +33,11 @@ public class Rateable {
     }
     private void setName(String name){
         this.name=name;
+    }
+    public void clearTags(){
+        this.tags.clear();
+    }
+    public void removeTag(String toRemove){
+        this.tags.remove(toRemove);
     }
 }
