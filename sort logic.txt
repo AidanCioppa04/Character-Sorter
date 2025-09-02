@@ -1,0 +1,8 @@
+Sort logic
+
+goal perform a comparison of every character to every other at least once
+number of comparisons required is N(N-1) where N is number of chars
+
+first take
+start with first char and compare with every other, when finished you will know the exact placement of first char since
+you know every character less liked and more liked that the first, #chars - #rated lower = rank 
